@@ -40,12 +40,12 @@ namespace MyVet.Web.Data
         }
 
         private async Task<User> CheckUserAsync(
-            string document,
-            string firstName,
-            string lastName,
-            string email,
-            string phone,
-            string address,
+            string document, 
+            string firstName, 
+            string lastName, 
+            string email, 
+            string phone, 
+            string address, 
             string role)
         {
             var user = await _userHelper.GetUserByEmailAsync(email);

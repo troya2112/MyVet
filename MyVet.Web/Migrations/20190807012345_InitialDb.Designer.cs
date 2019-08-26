@@ -9,7 +9,7 @@ using MyVet.Web.Data;
 namespace MyVet.Web.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20190824164355_InitialDb")]
+    [Migration("20190807012345_InitialDb")]
     partial class InitialDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,7 +20,7 @@ namespace MyVet.Web.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("MyVet.Web.DATA.Entities.Owner", b =>
+            modelBuilder.Entity("MyVet.Web.Data.Entities.Owner", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

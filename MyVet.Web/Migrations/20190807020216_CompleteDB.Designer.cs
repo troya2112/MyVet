@@ -10,7 +10,7 @@ using MyVet.Web.Data;
 namespace MyVet.Web.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20190824194120_CompleteDB")]
+    [Migration("20190807020216_CompleteDB")]
     partial class CompleteDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -73,7 +73,7 @@ namespace MyVet.Web.Migrations
                     b.ToTable("Histories");
                 });
 
-            modelBuilder.Entity("MyVet.Web.DATA.Entities.Owner", b =>
+            modelBuilder.Entity("MyVet.Web.Data.Entities.Owner", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -170,7 +170,7 @@ namespace MyVet.Web.Migrations
 
             modelBuilder.Entity("MyVet.Web.Data.Entities.Agenda", b =>
                 {
-                    b.HasOne("MyVet.Web.DATA.Entities.Owner", "Owner")
+                    b.HasOne("MyVet.Web.Data.Entities.Owner", "Owner")
                         .WithMany("Agendas")
                         .HasForeignKey("OwnerId");
 
@@ -192,7 +192,7 @@ namespace MyVet.Web.Migrations
 
             modelBuilder.Entity("MyVet.Web.Data.Entities.Pet", b =>
                 {
-                    b.HasOne("MyVet.Web.DATA.Entities.Owner", "Owner")
+                    b.HasOne("MyVet.Web.Data.Entities.Owner", "Owner")
                         .WithMany("Pets")
                         .HasForeignKey("OwnerId");
 

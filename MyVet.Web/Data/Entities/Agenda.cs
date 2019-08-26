@@ -1,5 +1,4 @@
-﻿using MyVet.Web.DATA.Entities;
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace MyVet.Web.Data.Entities
@@ -20,10 +19,10 @@ namespace MyVet.Web.Data.Entities
         public bool IsAvailable { get; set; }
 
         [Display(Name = "Date")]
-        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd HH:mm}")]
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd H:mm tt}")]
         public DateTime DateLocal => Date.ToLocalTime();
 
-        public  Owner Owner { get; set; }
+        public Owner Owner { get; set; }
 
         public Pet Pet { get; set; }
     }

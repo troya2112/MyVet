@@ -13,6 +13,5 @@ namespace MyVet.Web.Data.Entities
         public string Name { get; set; }
 
         public ICollection<History> Histories { get; set; }
-
     }
 }

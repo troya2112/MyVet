@@ -7,4 +7,3 @@
         public User User { get; set; }
     }
 }
-
